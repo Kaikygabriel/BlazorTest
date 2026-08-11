@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SalaDoFuturo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+252ce59e19409040387b21b572ee125110aa525b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5062e88871da605d0dc705dea3bf6faed59e25e2")]
 [assembly: System.Reflection.AssemblyProductAttribute("SalaDoFuturo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SalaDoFuturo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
