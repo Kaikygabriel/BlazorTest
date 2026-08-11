@@ -1,0 +1,4 @@
+C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\release\wwwroot\index.html
+C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\release\SalaDoFuturo.runtimeconfig.json
+C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\release\dotnet.js
+C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\release\web.config

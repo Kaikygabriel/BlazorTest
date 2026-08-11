@@ -1,0 +1,102 @@
+.boletim-container[b-l75efdx1uq] {
+    max-width: 950px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border: 1px solid #cccccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #000000;
+}
+
+.header[b-l75efdx1uq] {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1[b-l75efdx1uq] {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 2px 0;
+    text-transform: uppercase;
+}
+
+.header h2[b-l75efdx1uq] {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 2px 0;
+    text-transform: uppercase;
+}
+
+.header h3[b-l75efdx1uq] {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.info-section[b-l75efdx1uq] {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.info-row[b-l75efdx1uq] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 3px;
+}
+
+.boletim-table[b-l75efdx1uq] {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    font-size: 10px;
+}
+
+.boletim-table[b-l75efdx1uq], .boletim-table th[b-l75efdx1uq], .boletim-table td[b-l75efdx1uq] {
+    border: 1px solid #000000;
+}
+
+.boletim-table th[b-l75efdx1uq], .boletim-table td[b-l75efdx1uq] {
+    padding: 4px 2px;
+    text-align: center;
+}
+
+.boletim-table th[b-l75efdx1uq] {
+    background-color: #e6e6e6;
+    font-weight: bold;
+}
+
+.boletim-table td.subject[b-l75efdx1uq] {
+    text-align: left;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+.col-disciplina[b-l75efdx1uq] {
+    width: 25%;
+}
+
+.resultado-final[b-l75efdx1uq] {
+    margin-bottom: 15px;
+}
+
+.siglas[b-l75efdx1uq] {
+    font-size: 10px;
+    margin-top: 15px;
+    border-top: 1px solid #000000;
+    padding-top: 5px;
+}
+
+@media print {
+    .boletim-container[b-l75efdx1uq] {
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+}
