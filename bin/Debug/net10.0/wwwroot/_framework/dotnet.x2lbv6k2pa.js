@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "SalaDoFuturo",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-R9WcppIdgLDeKL9iAP6RvTz9ouDrEkjl2EVOEtd3WLM=",
+    "hash": "sha256-xDzVby0QRiYhn7sEWY8gw3JTGcz/rdooh5OBMnHpJA8=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.ikrs475e5v.js"
@@ -1242,16 +1242,16 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "SalaDoFuturo.wasm",
-        "name": "SalaDoFuturo.cgg61u9d8d.wasm",
-        "hash": "sha256-NL41Y/7Vqc2VHvbdtm845bIpa85Eag1blAJIz/oKx6s=",
+        "name": "SalaDoFuturo.pk2pwwj3ek.wasm",
+        "hash": "sha256-t5ZOuJC1c1nTCKepjCR6fYJ70jl8tyKS+sRiIPgIaKU=",
         "cache": "force-cache"
       }
     ],
     "pdb": [
       {
         "virtualPath": "SalaDoFuturo.pdb",
-        "name": "SalaDoFuturo.rlf4qm8p4y.pdb",
-        "hash": "sha256-Aaa/GtonSn21yi/6eODG09MjZwOtPRHCjUYocaTNzbg=",
+        "name": "SalaDoFuturo.4ijvgl5fi1.pdb",
+        "hash": "sha256-fAgn2n+yoKxht0EOw5Pgs/3SrS8Y4Lrm3rvf70xZdeA=",
         "cache": "force-cache"
       }
     ],

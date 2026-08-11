@@ -207,9 +207,6 @@ C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat
-C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\SalaDoFuturo.cgg61u9d8d.wasm
-C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\SalaDoFuturo.rlf4qm8p4y.pdb
-C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\dotnet.fm42zdv37l.js
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\blazor.webassembly.w3qd1tpl0e.js.gz
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.4w3z20tuqk.wasm.gz
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Components.0z8r7oen0q.wasm.gz
@@ -418,9 +415,6 @@ C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat.gz
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat.gz
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat.gz
-C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\SalaDoFuturo.cgg61u9d8d.wasm.gz
-C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\SalaDoFuturo.rlf4qm8p4y.pdb.gz
-C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\dotnet.fm42zdv37l.js.gz
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\SalaDoFuturo.staticwebassets.runtime.json
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\SalaDoFuturo.staticwebassets.endpoints.json
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\Microsoft.AspNetCore.Authorization.dll
@@ -1110,9 +1104,6 @@ C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\obj\Debug\net10.0\compresse
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\obj\Debug\net10.0\compressed\nxhpb55tev-{0}-tjcz0u77k5-tjcz0u77k5.gz
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\obj\Debug\net10.0\compressed\nzu1jx6ld1-{0}-tptq2av103-tptq2av103.gz
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\obj\Debug\net10.0\compressed\cf1khhrsox-{0}-lfu7j35m59-lfu7j35m59.gz
-C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\obj\Debug\net10.0\compressed\wgumod6f7d-{0}-cgg61u9d8d-cgg61u9d8d.gz
-C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\obj\Debug\net10.0\compressed\innyfh8da9-{0}-rlf4qm8p4y-rlf4qm8p4y.gz
-C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\obj\Debug\net10.0\compressed\scdv8rnf8o-{0}-fm42zdv37l-fm42zdv37l.gz
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\obj\Debug\net10.0\staticwebassets.build.json.cache
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\obj\Debug\net10.0\staticwebassets.development.json
@@ -1125,4 +1116,13 @@ C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\obj\Debug\net10.0\SalaDoFut
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\SalaDoFuturo.dll
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\SalaDoFuturo.pdb
 C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\obj\Debug\net10.0\ref\SalaDoFuturo.dll
-C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\obj\Debug\net10.0\compressed\9jrpfzqqhm-{0}-nqmr6k87q6-nqmr6k87q6.gz
+C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\SalaDoFuturo.pk2pwwj3ek.wasm
+C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\SalaDoFuturo.4ijvgl5fi1.pdb
+C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\dotnet.x2lbv6k2pa.js
+C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\SalaDoFuturo.pk2pwwj3ek.wasm.gz
+C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\SalaDoFuturo.4ijvgl5fi1.pdb.gz
+C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\bin\Debug\net10.0\wwwroot\_framework\dotnet.x2lbv6k2pa.js.gz
+C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\obj\Debug\net10.0\compressed\wgumod6f7d-{0}-pk2pwwj3ek-pk2pwwj3ek.gz
+C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\obj\Debug\net10.0\compressed\innyfh8da9-{0}-4ijvgl5fi1-4ijvgl5fi1.gz
+C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\obj\Debug\net10.0\compressed\scdv8rnf8o-{0}-x2lbv6k2pa-x2lbv6k2pa.gz
+C:\Users\kaiky\Downloads\kaka\C#\Testes\SalaDoFuturo\obj\Debug\net10.0\compressed\9jrpfzqqhm-{0}-3dgtmy6fj2-3dgtmy6fj2.gz
