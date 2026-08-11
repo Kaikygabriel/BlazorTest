@@ -2,11 +2,18 @@ name: Deploy Blazor WASM to GitHub Pages
 
 on:
   push:
-    branches: [ main ] # Ajuste para 'master' se sua branch principal não for 'main'
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -14,18 +21,20 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '10.0.x' # Ou '9.0.x' conforme o SDK do seu projeto
+          dotnet-version: '10.0.x'
 
-      - name: Publish Blazor App
+      - name: Publish
         run: dotnet publish -c Release -o release
 
-      - name: Bypass Jekyll & SPA Fallback
+      - name: Prepare GitHub Pages
         run: |
           touch release/wwwroot/.nojekyll
           cp release/wwwroot/index.html release/wwwroot/404.html
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          FOLDER: release/wwwroot
-          BRANCH: gh-pages
+          path: release/wwwroot
+
+      - name: Deploy
+        uses: actions/deploy-pages@v4
