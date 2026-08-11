@@ -28,6 +28,12 @@ jobs:
 
       - name: Prepare
         run: |
+          echo "Conteúdo publicado:"
+          find release/wwwroot -maxdepth 3 -type f | sort
+
+          echo "Verificando CSS:"
+          ls -lah release/wwwroot/css/app.css
+
           touch release/wwwroot/.nojekyll
           cp release/wwwroot/index.html release/wwwroot/404.html
 
