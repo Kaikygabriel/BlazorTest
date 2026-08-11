@@ -1,0 +1,188 @@
+﻿@page "/"
+@using SalaDoFuturo.wwwroot.Configurations
+
+<div class="min-h-screen bg-[#f4f6f9] text-[#2c3e50] antialiased pb-8">
+    
+    <header class="bg-white px-4 py-3 border-b border-gray-200 flex items-center justify-between sticky top-0 z-50">
+        <div class="flex items-center">
+            <div class="w-9 h-9 rounded-full bg-[#fce8e6] flex items-center justify-center">
+                <svg class="w-5 h-5 text-[#d93025]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM3.82 9L12 4.53 20.18 9 12 13.47 3.82 9zM6 13.85V17c0 1.66 2.69 3 6 3s6-1.34 6-3v-3.15l-6 3.27-6-3.27z"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="flex items-center space-x-3">
+            <div class="relative">
+                <button class="p-1.5 text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" 
+                              d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                    </svg>
+                </button>
+                <span class="absolute -top-1 -right-1 flex items-center justify-center min-w-[18px] h-[18px] px-1 text-[11px] font-bold leading-none text-white bg-[#d93025] rounded-full">
+                    15
+                </span>
+            </div>
+
+            <div class="w-10 h-10 rounded-full bg-[#e8eaed] text-[#5f6368] font-bold text-sm flex items-center justify-center border border-gray-300">
+                @Caracter
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-md mx-auto px-4 pt-5 space-y-3.5">
+        
+        <div class="mb-1">
+            <h1 class="text-[22px] font-bold text-[#202124] flex items-center gap-1.5">
+                Olá, @User.Name
+                <span class="text-base">🏛️</span>
+            </h1>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 border-b-4 border-b-[#f28b82]">
+            <div class="text-4xl font-extrabold text-[#202124] tracking-tight">0</div>
+            <div class="text-[#5f6368] font-medium text-sm mt-0.5">Pendência</div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+            <div class="text-4xl font-extrabold text-[#202124] tracking-tight">15</div>
+            <div class="text-[#5f6368] font-medium text-sm mt-0.5">Mensagens não lidas</div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex items-center justify-between">
+            <div>
+                <div class="text-4xl font-extrabold text-[#202124] tracking-tight">12</div>
+                <div class="text-[#5f6368] font-medium text-sm mt-0.5">Faltas</div>
+            </div>
+            <div class="bg-[#f1f3f4] text-[#3c4043] text-xs font-normal px-3.5 py-2.5 rounded-xl max-w-[150px] leading-relaxed text-center">
+                Sua presença é <span class="font-bold">muito importante.</span>
+            </div>
+        </div>
+
+        <button @onclick="NavegarBoletim" class="w-full bg-white rounded-2xl p-5 shadow-sm border border-gray-100 text-left hover:bg-gray-50 transition active:scale-[0.99] block">
+            <h2 class="text-2xl font-bold text-[#202124] tracking-tight">
+                Boletim <span class="font-normal text-[#5f6368]">e Avaliações</span>
+            </h2>
+        </button>
+
+        <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 border-b-4 border-b-[#e91e63] flex items-center space-x-3.5">
+            <div class="text-3xl">🏆</div>
+            <div>
+                <div class="text-[10px] text-[#80868b] font-semibold uppercase tracking-wider">ver minhas</div>
+                <div class="text-xl font-extrabold text-[#202124] tracking-tight">Conquistas</div>
+            </div>
+        </div>
+
+        <div class="text-center py-2 text-[#5f6368] text-sm">
+            Não há <span class="font-bold">pesquisas</span> a serem respondidas.
+        </div>
+
+        <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 space-y-2.5">
+            <h3 class="text-base font-bold text-[#202124]">Agenda</h3>
+
+            <div class="bg-[#e8f0fe] rounded-xl p-3 flex items-center space-x-3 text-xs">
+                <div class="text-[#1a73e8] font-bold text-center border-r border-[#d2e3fc] pr-3 leading-tight">
+                    27/08<br/><span class="font-normal text-[#5f6368]">Qui</span>
+                </div>
+                <div class="text-[#1967d2] font-semibold">Reunião do Conselho de Escola</div>
+            </div>
+
+            <div class="bg-[#e8f0fe] rounded-xl p-3 flex items-center space-x-3 text-xs">
+                <div class="text-[#1a73e8] font-bold text-center border-r border-[#d2e3fc] pr-3 leading-tight">
+                    27/08<br/><span class="font-normal text-[#5f6368]">Qui</span>
+                </div>
+                <div class="text-[#1967d2] font-semibold">Reunião da Apm</div>
+            </div>
+        </div>
+
+        <div class="space-y-2.5 pt-1">
+            <div class="flex justify-between items-center px-1">
+                <h3 class="text-base font-bold text-[#202124]">Plataformas de Aprendizagem</h3>
+                <a href="#" class="text-[#1a73e8] text-xs font-semibold flex items-center gap-1 hover:underline">
+                    Ver todas 
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 gap-2.5">
+                <div class="bg-white p-3.5 rounded-2xl shadow-sm border border-gray-100 flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-lg bg-[#fce8e6] flex items-center justify-center text-[#d93025]">📘</div>
+                    <span class="font-medium text-sm text-[#3c4043]">Materiais Digitais</span>
+                </div>
+
+                <div class="bg-white p-3.5 rounded-2xl shadow-sm border border-gray-100 flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-lg bg-[#e6f4ea] flex items-center justify-center text-[#137333]">📝</div>
+                    <span class="font-medium text-sm text-[#3c4043]">Provas</span>
+                </div>
+
+                <div class="bg-white p-3.5 rounded-2xl shadow-sm border border-gray-100 flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-lg bg-[#e6f4ea] flex items-center justify-center text-[#137333]">☑️</div>
+                    <span class="font-medium text-sm text-[#3c4043]">Tarefa SP</span>
+                </div>
+
+                <div class="bg-white p-3.5 rounded-2xl shadow-sm border border-gray-100 flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-lg bg-[#f3e8fd] flex items-center justify-center text-[#9333ea]">📖</div>
+                    <span class="font-medium text-sm text-[#3c4043]">Redação Paulista</span>
+                </div>
+
+                <div class="bg-white p-3.5 rounded-2xl shadow-sm border border-gray-100 flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-lg bg-[#e8f0fe] flex items-center justify-center text-[#1a73e8]">🏫</div>
+                    <span class="font-medium text-sm text-[#3c4043]">Sala de Aula Virtual</span>
+                </div>
+
+                <div class="bg-white p-3.5 rounded-2xl shadow-sm border border-gray-100 flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-lg bg-[#e8f0fe] flex items-center justify-center text-[#1a73e8]">⚙️</div>
+                    <span class="font-medium text-sm text-[#3c4043]">Avaliação Diagnóstica</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-2.5 pt-2">
+            <h3 class="text-base font-bold text-[#202124] px-1">Acesso Fácil</h3>
+            <div class="grid grid-cols-1 gap-2.5">
+                <div class="bg-white p-3.5 rounded-2xl shadow-sm border border-gray-100 flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-lg bg-[#e8f0fe] flex items-center justify-center text-[#1a73e8]">📑</div>
+                    <span class="font-medium text-sm text-[#3c4043]">Secretaria Escolar Digital (SED)</span>
+                </div>
+                <div class="bg-white p-3.5 rounded-2xl shadow-sm border border-gray-100 flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-lg bg-[#f1f3f4] flex items-center justify-center text-[#5f6368]">🏛️</div>
+                    <span class="font-medium text-sm text-[#3c4043]">Grêmio Estudantil Paulista</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- RODAPÉ GRUDADO NO FINAL DA TELA (Sem margens sobressalentes) -->
+    <footer class="w-full pt-6 mt-auto leading-none">
+        <img src="Images/footer-sala-do-futuro.jpeg" 
+             alt="Rodapé Sala do Futuro" 
+             class="w-full h-auto block object-cover" />
+    </footer>
+</div>
+
+@code {
+    [Inject] NavigationManager Navigation { get; set; } = default!;
+    
+    private string Caracter = "";
+    protected override void OnInitialized()
+    {
+        try
+        {
+            var arr = User.Name.Split(' ');
+        
+            Caracter += arr[0].ToCharArray()[0];
+            Caracter += arr[1].ToCharArray()[0];
+        }
+        catch (Exception e)
+        {
+            Caracter = "AB";
+        }
+        
+    }
+
+    private void NavegarBoletim()
+    {
+        Navigation.NavigateTo("/boletim");
+    }
+}

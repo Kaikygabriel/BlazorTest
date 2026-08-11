@@ -1,0 +1,55 @@
+@page "/selection"
+@inject NavigationManager NavManager
+
+<div class="sf-container">
+    <div class="sf-header">
+        <div class="logo">
+            <!-- Insira aqui o caminho da sua imagem na pasta wwwroot -->
+            <img src="Images/icone.jpeg" alt="Logo Sala do Futuro" class="logo-img" />
+        </div>
+        <h2 class="title">Olá, novamente!</h2>
+        <p class="subtitle">Já estávamos sentindo a sua falta.</p>
+        <p class="instruction">Escolha abaixo um perfil para acessar.</p>
+    </div>
+
+    <div class="options">
+        <button class="card-btn" @onclick='() => NavManager.NavigateTo("/login")'>
+            <span>Sou <strong>Estudante</strong></span>
+            <span class="arrow">→</span>
+        </button>
+        <button class="card-btn">
+            <span>Sou <strong>Servidor</strong></span>
+            <span class="arrow">→</span>
+        </button>
+        <button class="card-btn">
+            <span>Sou <strong>Responsável</strong></span>
+            <span class="arrow">→</span>
+        </button>
+    </div>
+
+    <button class="info-btn">
+        <span>Você sabe o que é a</span><br>
+        <strong>SALA DO FUTURO?</strong>
+    </button>
+
+    <div class="footer">
+        <a href="#">Preciso de ajuda</a>
+        <div class="gov-logo">SP.GOV.BR</div>
+    </div>
+</div>
+
+<style>
+    .sf-container { max-width: 400px; margin: 0 auto; padding: 20px; font-family: sans-serif; display: flex; flex-direction: column; gap: 20px; }
+    .sf-header { text-align: center; }
+    .logo { display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+    .logo-img { max-width: 180px; height: auto; object-fit: contain; }
+    .title { font-size: 24px; color: #333; margin: 10px 0; }
+    .subtitle { color: #666; margin-bottom: 5px; }
+    .instruction { color: #888; font-size: 14px; margin-bottom: 20px; }
+    .options { display: flex; flex-direction: column; gap: 15px; }
+    .card-btn { background: white; border: 1px solid #eee; padding: 20px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); cursor: pointer; transition: 0.2s; }
+    .card-btn:hover { border-color: #007bff; }
+    .info-btn { background: linear-gradient(to right, #2c7da0, #468faf); color: white; border: none; padding: 15px; border-radius: 12px; cursor: pointer; font-size: 14px; }
+    .footer { text-align: center; margin-top: auto; display: flex; flex-direction: column; gap: 10px; }
+    .gov-logo { font-weight: bold; letter-spacing: 1px; color: #333; }
+</style>

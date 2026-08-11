@@ -1,0 +1,116 @@
+@page "/boletim"
+@using SalaDoFuturo.wwwroot.Configurations
+
+<div class="min-h-screen bg-[#f4f6f9] text-[#2c3e50] antialiased pb-8">
+    
+    <header class="bg-white px-4 py-3 border-b border-gray-200 flex items-center justify-between sticky top-0 z-50">
+        <div class="flex items-center">
+            <div class="w-9 h-9 rounded-full bg-[#fce8e6] flex items-center justify-center">
+                <svg class="w-5 h-5 text-[#d93025]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM3.82 9L12 4.53 20.18 9 12 13.47 3.82 9zM6 13.85V17c0 1.66 2.69 3 6 3s6-1.34 6-3v-3.15l-6 3.27-6-3.27z"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="w-10 h-10 rounded-full bg-[#e8eaed] text-[#5f6368] font-bold text-sm flex items-center justify-center border border-gray-300">
+            RM
+        </div>
+    </header>
+
+    <main class="max-w-md mx-auto px-4 pt-5 space-y-4">
+        
+        <div>
+            <h1 class="text-xl font-bold text-[#202124]">Olá, @User.Name</h1>
+            <h2 class="text-xl font-bold text-[#202124] mt-1">Boletim e Avaliações</h2>
+            <div class="text-xs text-[#80868b] mt-1">Home / <span class="text-[#3c4043]">Boletim</span></div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div class="bg-[#1a73e8] text-white px-4 py-3 flex justify-between items-center text-sm font-bold">
+                <span>2026</span>
+                <span>1º Bimestre</span>
+            </div>
+
+            <div class="grid grid-cols-12 p-3.5 border-b border-gray-100 text-[11px] font-bold text-[#5f6368] items-center">
+                <span class="col-span-8">Componente</span>
+                <span class="col-span-4 text-center flex items-center justify-center gap-1">
+                    Média do Aluno
+                    <span class="text-gray-400 text-[10px]">ℹ️</span>
+                </span>
+            </div>
+
+            <div class="grid grid-cols-12 p-4 items-center">
+                <div class="col-span-8 font-bold text-[#202124] text-xs flex items-center gap-2">
+                    <span class="text-gray-400 text-[10px]">❯</span>
+                    Língua Estrangeira Inglês
+                </div>
+                <div class="col-span-4 flex justify-center">
+                    <span class="bg-[#fef7e0] text-[#b06000] font-extrabold text-sm px-3.5 py-1.5 rounded-lg border border-[#feefc3]">
+                        5
+                    </span>
+                </div>
+            </div>
+            <div class="grid grid-cols-12 p-4 items-center">
+                <div class="col-span-8 font-bold text-[#202124] text-xs flex items-center gap-2">
+                    <span class="text-gray-400 text-[10px]">❯</span>
+                    Língua Portuguesa
+                </div>
+                <div class="col-span-4 flex justify-center">
+                    <span class="bg-[#fef7e0] text-[#b06000] font-extrabold text-sm px-3.5 py-1.5 rounded-lg border border-[#feefc3]">
+                        7
+                    </span>
+                </div>
+            </div>
+            <div class="grid grid-cols-12 p-4 items-center">
+                <div class="col-span-8 font-bold text-[#202124] text-xs flex items-center gap-2">
+                    <span class="text-gray-400 text-[10px]">❯</span>
+                    Matematica
+                </div>
+                <div class="col-span-4 flex justify-center">
+                    <span class="bg-[#fef7e0] text-[#b06000] font-extrabold text-sm px-3.5 py-1.5 rounded-lg border border-[#feefc3]">
+                        6
+                    </span>
+                </div>
+            </div>
+            <div class="grid grid-cols-12 p-4 items-center">
+                <div class="col-span-8 font-bold text-[#202124] text-xs flex items-center gap-2">
+                    <span class="text-gray-400 text-[10px]">❯</span>
+                    Historia
+                </div>
+                <div class="col-span-4 flex justify-center">
+                    <span class="bg-[#fef7e0] text-[#b06000] font-extrabold text-sm px-3.5 py-1.5 rounded-lg border border-[#feefc3]">
+                        8
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex space-x-3 pt-2">
+            <button @onclick="Voltar" class="flex-1 border-2 border-[#1a365d] text-[#1a365d] font-bold py-2.5 rounded-full text-center text-xs hover:bg-blue-50 transition flex items-center justify-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                Voltar
+            </button>
+
+            <button @onclick="Details" class="flex-1 bg-[#1a73e8] text-white font-bold py-2.5 rounded-full text-center text-xs shadow hover:bg-[#1557b0] transition flex items-center justify-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Baixar Boletim
+            </button>
+        </div>
+
+        <footer class="pt-6 pb-4">
+            <img src="Images/footer-sala-do-futuro.jpeg" alt="Rodapé Sala do Futuro" class="w-full h-auto object-contain mx-auto" />
+        </footer>
+
+    </main>
+</div>
+
+@code {
+    [Inject] NavigationManager Navigation { get; set; } = default!;
+
+    private void Details()
+        =>  Navigation.NavigateTo("/BoletimDetails"); 
+    private void Voltar()
+    {
+        Navigation.NavigateTo("/");
+    }
+}

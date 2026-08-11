@@ -1,0 +1,389 @@
+@page "/BoletimDetails"
+@using SalaDoFuturo.wwwroot.Configurations
+
+<PageTitle>Boletim Escolar - Governo do Estado de São Paulo</PageTitle>
+
+<div class="boletim-container">
+    <div class="header">
+        <h1>GOVERNO DO ESTADO DE SÃO PAULO</h1>
+        <h2>SECRETARIA DE ESTADO DA EDUCAÇÃO</h2>
+        <h3>Boletim Escolar</h3>
+    </div>
+
+    @if (boletimData != null)
+    {
+        <!-- Informações do Aluno / Cabeçalho -->
+        <div class="info-section">
+            <div class="info-row">
+                <div><strong>Nome do Aluno:</strong> @User.Name</div>
+                <div><strong>RA:</strong> @boletimData.Aluno.RA</div>
+                <div><strong>Ano Letivo:</strong> 2026</div>
+            </div>
+            <div class="info-row">
+                <div><strong>Diretoria:</strong> @boletimData.Aluno.Diretoria</div>
+                <div><strong>Escola:</strong> @boletimData.Aluno.Escola</div>
+            </div>
+            <div class="info-row">
+                <div><strong>Tipo de Ensino:</strong> @boletimData.Aluno.TipoEnsino</div>
+                <div><strong>Turma:</strong> @boletimData.Aluno.Turma</div>
+            </div>
+        </div>
+
+        <!-- Tabela Novo Ensino Médio -->
+        <table class="boletim-table">
+            <thead>
+                <tr>
+                    <th rowspan="2" class="col-disciplina">Disciplina</th>
+                    <th colspan="4">1º Bimestre</th>
+                    <th colspan="4">2º Bimestre</th>
+                    <th colspan="4">3º Bimestre</th>
+                    <th colspan="4">4º Bimestre</th>
+                    <th colspan="4">CF</th>
+                </tr>
+                <tr>
+                    @for (int i = 0; i < 5; i++)
+                    {
+                        <th>N</th><th>F</th><th>%Freq</th><th>AC</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var disc in boletimData.DisciplinasNovoEnsinoMedio)
+                {
+                    <tr>
+                        <td class="subject">@disc.Nome</td>
+                        <!-- 1º Bimestre -->
+                        <td>@disc.Bimestre1.Nota</td>
+                        <td>@disc.Bimestre1.Faltas</td>
+                        <td>@disc.Bimestre1.FreqFormatada</td>
+                        <td>@disc.Bimestre1.ACFormatado</td>
+                        <!-- 2º Bimestre -->
+                        <td>@disc.Bimestre2.Nota</td>
+                        <td>@disc.Bimestre2.Faltas</td>
+                        <td>@disc.Bimestre2.FreqFormatada</td>
+                        <td>@disc.Bimestre2.ACFormatado</td>
+                        <!-- 3º Bimestre -->
+                        <td>@disc.Bimestre3.Nota</td>
+                        <td>@disc.Bimestre3.Faltas</td>
+                        <td>@disc.Bimestre3.FreqFormatada</td>
+                        <td>@disc.Bimestre3.ACFormatado</td>
+                        <!-- 4º Bimestre -->
+                        <td>@disc.Bimestre4.Nota</td>
+                        <td>@disc.Bimestre4.Faltas</td>
+                        <td>@disc.Bimestre4.FreqFormatada</td>
+                        <td>@disc.Bimestre4.ACFormatado</td>
+                        <!-- CF -->
+                        <td>@disc.CF.Nota</td>
+                        <td>@disc.CF.Faltas</td>
+                        <td>@disc.CF.FreqFormatada</td>
+                        <td>@disc.CF.ACFormatado</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="resultado-final">
+            <strong>Resultado Final:</strong> @(string.IsNullOrEmpty(boletimData.ResultadoFinalNovoEnsinoMedio) ? "-" : boletimData.ResultadoFinalNovoEnsinoMedio)
+        </div>
+
+        <!-- Informações Itinerário Formativo -->
+        <div class="info-section">
+            <div class="info-row">
+                <div><strong>Diretoria:</strong> @boletimData.Aluno.Diretoria</div>
+                <div><strong>Escola:</strong> @boletimData.Aluno.Escola</div>
+            </div>
+            <div class="info-row">
+                <div><strong>Tipo de Ensino:</strong> @boletimData.Itinerario.TipoEnsino</div>
+                <div><strong>Turma:</strong> @boletimData.Itinerario.Turma</div>
+            </div>
+        </div>
+
+        <!-- Tabela Itinerário Formativo -->
+        <table class="boletim-table">
+            <thead>
+                <tr>
+                    <th rowspan="2" class="col-disciplina">Disciplina</th>
+                    <th colspan="4">1º Bimestre</th>
+                    <th colspan="4">2º Bimestre</th>
+                    <th colspan="4">3º Bimestre</th>
+                    <th colspan="4">4º Bimestre</th>
+                    <th colspan="4">CF</th>
+                </tr>
+                <tr>
+                    @for (int i = 0; i < 5; i++)
+                    {
+                        <th>N</th><th>F</th><th>%Freq</th><th>AC</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var disc in boletimData.DisciplinasItinerario)
+                {
+                    <tr>
+                        <td class="subject">@disc.Nome</td>
+                        <!-- 1º Bimestre -->
+                        <td>@disc.Bimestre1.Nota</td>
+                        <td>@disc.Bimestre1.Faltas</td>
+                        <td>@disc.Bimestre1.FreqFormatada</td>
+                        <td>@disc.Bimestre1.ACFormatado</td>
+                        <!-- 2º Bimestre -->
+                        <td>@disc.Bimestre2.Nota</td>
+                        <td>@disc.Bimestre2.Faltas</td>
+                        <td>@disc.Bimestre2.FreqFormatada</td>
+                        <td>@disc.Bimestre2.ACFormatado</td>
+                        <!-- 3º Bimestre -->
+                        <td>@disc.Bimestre3.Nota</td>
+                        <td>@disc.Bimestre3.Faltas</td>
+                        <td>@disc.Bimestre3.FreqFormatada</td>
+                        <td>@disc.Bimestre3.ACFormatado</td>
+                        <!-- 4º Bimestre -->
+                        <td>@disc.Bimestre4.Nota</td>
+                        <td>@disc.Bimestre4.Faltas</td>
+                        <td>@disc.Bimestre4.FreqFormatada</td>
+                        <td>@disc.Bimestre4.ACFormatado</td>
+                        <!-- CF -->
+                        <td>@disc.CF.Nota</td>
+                        <td>@disc.CF.Faltas</td>
+                        <td>@disc.CF.FreqFormatada</td>
+                        <td>@disc.CF.ACFormatado</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="resultado-final">
+            <strong>Resultado Final:</strong> @(string.IsNullOrEmpty(boletimData.ResultadoFinalItinerario) ? "-" : boletimData.ResultadoFinalItinerario)
+        </div>
+
+        <div class="siglas">
+            <strong>Siglas:</strong><br />
+            <strong>CF</strong> – Conselho Final (Quinto Conceito) &nbsp;|&nbsp;
+            <strong>N</strong> - Notas &nbsp;|&nbsp;
+            <strong>F</strong> - Faltas &nbsp;|&nbsp;
+            <strong>AC</strong> - Ausências Compensadas
+        </div>
+    }
+</div>
+
+@code {
+    private BoletimModel boletimData = new();
+
+    protected override void OnInitialized()
+    {
+        boletimData = GetSampleData();
+    }
+
+    #region Domain Models
+    public class AvaliacaoBimestre
+    {
+        public string? Nota { get; set; }
+        public int? Faltas { get; set; }
+        public int? Frequencia { get; set; }
+        public int? AusenciasCompensadas { get; set; }
+
+        public string FreqFormatada => Frequencia.HasValue ? $"{Frequencia}%" : "-";
+        public string ACFormatado => AusenciasCompensadas.HasValue ? AusenciasCompensadas.Value.ToString() : "-";
+    }
+
+    public class DisciplinaBoletim
+    {
+        public string Nome { get; set; } = string.Empty;
+        public AvaliacaoBimestre Bimestre1 { get; set; } = new();
+        public AvaliacaoBimestre Bimestre2 { get; set; } = new();
+        public AvaliacaoBimestre Bimestre3 { get; set; } = new();
+        public AvaliacaoBimestre Bimestre4 { get; set; } = new();
+        public AvaliacaoBimestre CF { get; set; } = new();
+    }
+
+    public class AlunoInfo
+    {
+        public string Nome { get; set; } = string.Empty;
+        public string RA { get; set; } = string.Empty;
+        public string AnoLetivo { get; set; } = string.Empty;
+        public string Diretoria { get; set; } = string.Empty;
+        public string Escola { get; set; } = string.Empty;
+        public string TipoEnsino { get; set; } = string.Empty;
+        public string Turma { get; set; } = string.Empty;
+    }
+
+    public class ItinerarioInfo
+    {
+        public string TipoEnsino { get; set; } = string.Empty;
+        public string Turma { get; set; } = string.Empty;
+    }
+
+    public class BoletimModel
+    {
+        public AlunoInfo Aluno { get; set; } = new();
+        public ItinerarioInfo Itinerario { get; set; } = new();
+        public List<DisciplinaBoletim> DisciplinasNovoEnsinoMedio { get; set; } = new();
+        public List<DisciplinaBoletim> DisciplinasItinerario { get; set; } = new();
+        public string? ResultadoFinalNovoEnsinoMedio { get; set; }
+        public string? ResultadoFinalItinerario { get; set; }
+    }
+    #endregion
+
+    private BoletimModel GetSampleData()
+    {
+        return new BoletimModel
+        {
+            Aluno = new AlunoInfo
+            {
+                Nome = "KAIKY GABRIEL ALVES",
+                RA = "000111773855-3/SP",
+                AnoLetivo = "2024",
+                Diretoria = "MOGI DAS CRUZES",
+                Escola = "6713-FRANCISCO FERREIRA LOPES",
+                TipoEnsino = "NOVO ENSINO MÉDIO",
+                Turma = "3ª SERIE C INTEGRAL ANUAL"
+            },
+            Itinerario = new ItinerarioInfo
+            {
+                TipoEnsino = "ITINERÁRIO FORMATIVO",
+                Turma = "NÃO SERIADO 3C INTEGRAL ANUAL"
+            },
+            DisciplinasNovoEnsinoMedio = new List<DisciplinaBoletim>
+            {
+                new DisciplinaBoletim
+                {
+                    Nome = "BIOLOGIA",
+                    Bimestre1 = new AvaliacaoBimestre { Nota = "6", Faltas = 14, Frequencia = 22, AusenciasCompensadas = 14 },
+                    Bimestre2 = new AvaliacaoBimestre { Nota = "9", Faltas = 4, Frequencia = 82 },
+                    Bimestre3 = new AvaliacaoBimestre { Nota = "7", Faltas = 3, Frequencia = 85 },
+                    CF = new AvaliacaoBimestre { Faltas = 21, Frequencia = 63, AusenciasCompensadas = 14 }
+                },
+                new DisciplinaBoletim
+                {
+                    Nome = "EDUCAÇÃO FINANCEIRA",
+                    Bimestre1 = new AvaliacaoBimestre { Nota = "6", Faltas = 15, Frequencia = 17, AusenciasCompensadas = 10 },
+                    Bimestre2 = new AvaliacaoBimestre { Nota = "8", Faltas = 5, Frequencia = 77 },
+                    Bimestre3 = new AvaliacaoBimestre { Nota = "8", Faltas = 1, Frequencia = 95 },
+                    CF = new AvaliacaoBimestre { Faltas = 21, Frequencia = 63, AusenciasCompensadas = 10 }
+                },
+                new DisciplinaBoletim
+                {
+                    Nome = "EDUCACAO FISICA",
+                    Bimestre1 = new AvaliacaoBimestre { Nota = "6", Faltas = 6, Frequencia = 40 },
+                    Bimestre2 = new AvaliacaoBimestre { Nota = "9", Faltas = 3, Frequencia = 67 },
+                    Bimestre3 = new AvaliacaoBimestre { Nota = "7", Faltas = 2, Frequencia = 80 },
+                    CF = new AvaliacaoBimestre { Faltas = 11, Frequencia = 62 }
+                },
+                new DisciplinaBoletim
+                {
+                    Nome = "FISICA",
+                    Bimestre1 = new AvaliacaoBimestre { Nota = "5", Faltas = 11, Frequencia = 39, AusenciasCompensadas = 9 },
+                    Bimestre2 = new AvaliacaoBimestre { Nota = "8", Faltas = 4, Frequencia = 80 },
+                    Bimestre3 = new AvaliacaoBimestre { Nota = "7", Faltas = 5, Frequencia = 69 },
+                    CF = new AvaliacaoBimestre { Faltas = 20, Frequencia = 63, AusenciasCompensadas = 9 }
+                },
+                new DisciplinaBoletim
+                {
+                    Nome = "GEOGRAFIA",
+                    Bimestre1 = new AvaliacaoBimestre { Nota = "5", Faltas = 11, Frequencia = 35 },
+                    Bimestre2 = new AvaliacaoBimestre { Nota = "7", Faltas = 7, Frequencia = 63 },
+                    Bimestre3 = new AvaliacaoBimestre { Nota = "9", Faltas = 3, Frequencia = 85 },
+                    CF = new AvaliacaoBimestre { Faltas = 21, Frequencia = 61 }
+                },
+                new DisciplinaBoletim
+                {
+                    Nome = "HISTORIA",
+                    Bimestre1 = new AvaliacaoBimestre { Nota = "6", Faltas = 11, Frequencia = 39 },
+                    Bimestre2 = new AvaliacaoBimestre { Nota = "5", Faltas = 5, Frequencia = 75 },
+                    Bimestre3 = new AvaliacaoBimestre { Nota = "7", Faltas = 4, Frequencia = 78 },
+                    CF = new AvaliacaoBimestre { Faltas = 20, Frequencia = 64 }
+                },
+                new DisciplinaBoletim
+                {
+                    Nome = "INGLÊS",
+                    Bimestre1 = new AvaliacaoBimestre { Nota = "6", Faltas = 11, Frequencia = 42 },
+                    Bimestre2 = new AvaliacaoBimestre { Nota = "8", Faltas = 7, Frequencia = 65 },
+                    Bimestre3 = new AvaliacaoBimestre { Nota = "7", Faltas = 2, Frequencia = 90 },
+                    CF = new AvaliacaoBimestre { Faltas = 20, Frequencia = 66 }
+                },
+                new DisciplinaBoletim
+                {
+                    Nome = "LINGUA PORTUGUESA",
+                    Bimestre1 = new AvaliacaoBimestre { Nota = "5", Faltas = 18, Frequencia = 38, AusenciasCompensadas = 18 },
+                    Bimestre2 = new AvaliacaoBimestre { Nota = "6", Faltas = 10, Frequencia = 68, AusenciasCompensadas = 9 },
+                    Bimestre3 = new AvaliacaoBimestre { Nota = "6", Faltas = 6, Frequencia = 81, AusenciasCompensadas = 3 },
+                    CF = new AvaliacaoBimestre { Faltas = 34, Frequencia = 62, AusenciasCompensadas = 30 }
+                },
+                new DisciplinaBoletim
+                {
+                    Nome = "MATEMATICA",
+                    Bimestre1 = new AvaliacaoBimestre { Nota = "5", Faltas = 22, Frequencia = 12, AusenciasCompensadas = 22 },
+                    Bimestre2 = new AvaliacaoBimestre { Nota = "8", Faltas = 6, Frequencia = 80 },
+                    Bimestre3 = new AvaliacaoBimestre { Nota = "7", Faltas = 5, Frequencia = 79 },
+                    CF = new AvaliacaoBimestre { Faltas = 33, Frequencia = 57, AusenciasCompensadas = 22 }
+                },
+                new DisciplinaBoletim
+                {
+                    Nome = "ORIENTACAO DE ESTUDOS",
+                    Bimestre1 = new AvaliacaoBimestre { Nota = "6", Faltas = 18, Frequencia = 33 },
+                    Bimestre2 = new AvaliacaoBimestre { Nota = "8", Faltas = 7, Frequencia = 79 },
+                    Bimestre3 = new AvaliacaoBimestre { Nota = "7", Faltas = 4, Frequencia = 88 },
+                    CF = new AvaliacaoBimestre { Faltas = 29, Frequencia = 67 }
+                },
+                new DisciplinaBoletim
+                {
+                    Nome = "PROJETO DE VIDA",
+                    Bimestre1 = new AvaliacaoBimestre { Nota = "5", Faltas = 18, Frequencia = 18, AusenciasCompensadas = 18 },
+                    Bimestre2 = new AvaliacaoBimestre { Nota = "8", Faltas = 5, Frequencia = 75 },
+                    Bimestre3 = new AvaliacaoBimestre { Nota = "6", Faltas = 4, Frequencia = 83 },
+                    CF = new AvaliacaoBimestre { Faltas = 27, Frequencia = 59, AusenciasCompensadas = 18 }
+                },
+                new DisciplinaBoletim
+                {
+                    Nome = "QUIMICA",
+                    Bimestre1 = new AvaliacaoBimestre { Nota = "5", Faltas = 17, Frequencia = 6, AusenciasCompensadas = 15 },
+                    Bimestre2 = new AvaliacaoBimestre { Nota = "9", Faltas = 6, Frequencia = 73 },
+                    Bimestre3 = new AvaliacaoBimestre { Nota = "5", Faltas = 1, Frequencia = 95 },
+                    CF = new AvaliacaoBimestre { Faltas = 24, Frequencia = 58, AusenciasCompensadas = 15 }
+                },
+                new DisciplinaBoletim
+                {
+                    Nome = "REDAÇÃO E LEITURA",
+                    Bimestre1 = new AvaliacaoBimestre { Nota = "6", Faltas = 15, Frequencia = 17, AusenciasCompensadas = 12 },
+                    Bimestre2 = new AvaliacaoBimestre { Nota = "8", Faltas = 7, Frequencia = 67, AusenciasCompensadas = 2 },
+                    Bimestre3 = new AvaliacaoBimestre { Nota = "8", Faltas = 2, Frequencia = 90 },
+                    CF = new AvaliacaoBimestre { Faltas = 24, Frequencia = 58, AusenciasCompensadas = 14 }
+                },
+                new DisciplinaBoletim
+                {
+                    Nome = "SOCIOLOGIA",
+                    Bimestre1 = new AvaliacaoBimestre { Nota = "5", Faltas = 12, Frequencia = 33 },
+                    Bimestre2 = new AvaliacaoBimestre { Nota = "7", Faltas = 6, Frequencia = 71 },
+                    Bimestre3 = new AvaliacaoBimestre { Nota = "6", Faltas = 2, Frequencia = 89 },
+                    CF = new AvaliacaoBimestre { Faltas = 20, Frequencia = 64 }
+                }
+            },
+            DisciplinasItinerario = new List<DisciplinaBoletim>
+            {
+                new DisciplinaBoletim
+                {
+                    Nome = "Biotecnologia",
+                    Bimestre1 = new AvaliacaoBimestre { Nota = "4", Faltas = 8, Frequencia = 56 },
+                    Bimestre2 = new AvaliacaoBimestre { Nota = "6", Faltas = 4, Frequencia = 81 },
+                    Bimestre3 = new AvaliacaoBimestre { Nota = "5", Faltas = 2, Frequencia = 89 },
+                    CF = new AvaliacaoBimestre { Faltas = 14, Frequencia = 75 }
+                },
+                new DisciplinaBoletim
+                {
+                    Nome = "Empreendedorismo",
+                    Bimestre1 = new AvaliacaoBimestre { Nota = "5", Faltas = 14, Frequencia = 22, AusenciasCompensadas = 14 },
+                    Bimestre2 = new AvaliacaoBimestre { Nota = "8", Faltas = 4, Frequencia = 80 },
+                    Bimestre3 = new AvaliacaoBimestre { Nota = "9", Faltas = 3, Frequencia = 81 },
+                    CF = new AvaliacaoBimestre { Faltas = 21, Frequencia = 61, AusenciasCompensadas = 14 }
+                },
+                new DisciplinaBoletim
+                {
+                    Nome = "Tecnologia e Robótica",
+                    Bimestre1 = new AvaliacaoBimestre { Nota = "5", Faltas = 27, Frequencia = 25 },
+                    Bimestre2 = new AvaliacaoBimestre { Nota = "7", Faltas = 12, Frequencia = 70 },
+                    Bimestre3 = new AvaliacaoBimestre { Nota = "8", Faltas = 9, Frequencia = 72 },
+                    CF = new AvaliacaoBimestre { Faltas = 48, Frequencia = 56 }
+                }
+            }
+        };
+    }
+}
